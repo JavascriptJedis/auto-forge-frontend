@@ -1,10 +1,11 @@
 .not-found-container {
-    margin: 0;
-    padding: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .not-found-container img {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
-    padding: 10%;
+    padding: 5%;
 }

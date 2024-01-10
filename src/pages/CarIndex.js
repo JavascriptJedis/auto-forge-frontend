@@ -1,14 +1,17 @@
 import React from "react"
 import CarCard from "../components/CarCard"
+import './CarIndex.css'
 
 const CarIndex = ({ cars }) => {
   return (
     <>
     <main>
-      {cars?.map((car, index) => {
-        return <CarCard car={car} index={index} />
+      <div className="index-card-container">
+        {cars?.map((car, index) => {
+          return <CarCard car={car} index={index} />
 
-      })}
+        })}
+      </div>
     </main>
       </>
   )

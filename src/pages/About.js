@@ -12,6 +12,7 @@ import Justincar from "../assets/Justincar.png";
 const About = () => {
   return (
     <section className="about-main-container">
+      
       <div className='about-me-container'>
       <img src={Jacksoncar} alt='Jackson' />
         <div className='about-text-container'>
