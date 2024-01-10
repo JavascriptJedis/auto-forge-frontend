@@ -1,0 +1,10 @@
+.not-found-container {
+    margin: 0;
+    padding: 0;
+}
+
+.not-found-container img {
+    max-width: 100%;
+    height: auto;
+    padding: 10%;
+}
