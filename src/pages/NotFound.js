@@ -5,7 +5,7 @@ import notFound from "../assets/not-found.png";
 const NotFound = () => {
   return (
     <div className='not-found-container'>
-      <img src={notFound} alt='Page Not Found Error' />
+      <img className='not-found-img'  src={notFound} alt='Page Not Found Error' />
     </div>
   )
 }
