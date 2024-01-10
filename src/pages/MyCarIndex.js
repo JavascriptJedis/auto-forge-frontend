@@ -1,5 +1,6 @@
-
+import React from "react"
 import CarCard from "../components/CarCard"
+import './CarIndex.css'
 
 
 const MyCarIndex = ({ cars, currentUser}) => {
@@ -11,9 +12,11 @@ console.log("mycars:", myCars)
     return (
         <>
         <main>
+          <div className="index-card-container">
           {myCars?.map((car, index) => {
             return <CarCard car={car} index={index} />
           })}
+          </div>
         </main>
           </>
     )
