@@ -26,7 +26,7 @@ const Login = ({ login }) => {
       <div className="welcome-div">
         <h1 className="welcome-text-1">Welcome!</h1>
         <br />
-        <p>Sign in to access your AutoForge account.</p>
+        <p className="login-text">Sign in to access your AutoForge account.</p>
       </div>
 
       <div className="form-container">

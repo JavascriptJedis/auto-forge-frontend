@@ -1,48 +1,75 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Signup.css";
 
-  const Signup = ({ signup }) => {
-    const formRef = useRef()
-    const navigate = useNavigate()
-  
-    const handleSubmit = (e) => {
-      e.preventDefault()
-      //  store the form entries in variable
-      const formData = new FormData(formRef.current)
-      // create object from entries
-      const data = Object.fromEntries(formData)
-      //  put in format to use with JWT
-      const userInfo = {
-        user: { email: data.email, password: data.password },
-      }
-      signup(userInfo)
-      navigate("/")
-      e.target.reset() // reset the form
-    }
+const Signup = ({ signup }) => {
+  const formRef = useRef();
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    //  store the form entries in variable
+    const formData = new FormData(formRef.current);
+    // create object from entries
+    const data = Object.fromEntries(formData);
+    //  put in format to use with JWT
+    const userInfo = {
+      user: { email: data.email, password: data.password },
+    };
+    signup(userInfo);
+    navigate("/");
+    e.target.reset(); // reset the form
+  };
 
   return (
-    <div>
-      <form ref={formRef} onSubmit={handleSubmit}>
-        Email: <input type="email" name="email" placeholder="email" />
+    <section className="signup-section">
+      <div className="form-container">
+        <form className="signup-form" ref={formRef} onSubmit={handleSubmit}>
+
+        <p className="text-1">New here? Sign up for free</p>
+
+          Email:{" "}
+          <input
+            className="signup-input"
+            type="email"
+            name="email"
+            placeholder="Email"
+          />
+          <br />
+          Password:{" "}
+          <input
+            className="signup-input"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+          <br />
+          Confirm Password:{" "}
+          <input
+            className="signup-input"
+            type="password"
+            name="password_confirmation"
+            placeholder="Confirm password"
+          />
+          <button className="my-button-signup" type="submit" value="Submit">
+            Submit
+          </button>
+          <br />
+        </form>
         <br />
-        Password:{" "}
-        <input type="password" name="password" placeholder="password" />
-        <br />
-        Confirm Password:{" "}
-        <input
-          type="password"
-          name="password_confirmation"
-          placeholder="confirm password"
+      </div>
+
+      <div class="image-container">
+        <img
+          src="https://gwrench.com/wp-content/uploads/2023/03/CarRepairVista.jpeg"
+          alt="Cars Image Placeholder"
         />
-        <button type="submit" value="Submit">Submit</button>
-        <br />
-      </form>
-      <br />
-      <div>
+      </div>
+      {/* <div>
         {" "}
         Already registered? <a href="/login">Login</a>
-      </div>
-    </div>
+      </div> */}
+    </section>
   );
 };
 
