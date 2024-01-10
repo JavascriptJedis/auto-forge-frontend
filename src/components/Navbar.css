@@ -65,9 +65,14 @@
 .link:hover {
     color: #e1080b;
   }
-
-.logo img{
-    margin-top: -7.5vh;
-    width: 25rem;
-    height: 15rem;
+.logo{
+    margin-left: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{   
+    background-size: cover;
+    min-height: 3rem;
+    max-height: 4rem;
 }

@@ -17,7 +17,7 @@ const Navbar = ({ currentUser, logout }) => {
       
       <div className='logo'>
           <Link to='/'>
-            <img src="https://i.postimg.cc/bJrCh3P3/newlogo.png" ></img>
+            <img src="https://i.postimg.cc/NFL9WV2D/newlogo-1.png" ></img>
           </Link>
       </div>
 
