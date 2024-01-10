@@ -10,22 +10,24 @@ const CarCard = ({car, index}) => {
             <img src={car.image} alt={`picture of ${car.model}`} />
           </div>
           <div className="card-text-container">
-            <h2>
-              Make: {car.make}
-            </h2>
-            <h2>
-              Model: {car.model}
-            </h2>
-            <div>
-              <p>
-                <span>Project Preview:</span> 
-                <br />
-                {car.description} 
-              </p>
-              <div className="card-text-button-container">
-                <Link to={`/carshow/${car.id}`}>
-                  <button>Click to See More</button>
-                </Link>
+            <div className="card-text-padding-container">
+              <h5>
+                Make: <br /> <span>{car.make}</span>
+              </h5>
+              <h5>
+                Model: <br /> <span>{car.model}</span>
+              </h5>
+              <div className="card-text-desc-container">
+                <p>
+                  <span>Project Preview:</span> 
+                  <br />
+                  {car.description} 
+                </p>
+                <div className="card-text-button-container">
+                  <Link to={`/carshow/${car.id}`}>
+                    <button>Click to See More</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
