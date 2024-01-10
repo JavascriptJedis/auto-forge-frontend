@@ -32,7 +32,7 @@ const About = () => {
           <h4>Design Lead</h4>
           <h1>Jonathan Raya</h1>
           <div className='about-divider' />
-          <p>I'm Jonathan, an eager to learn entry-level full-stack software developer.I have a strong foundation in JavaScript, Ruby, HTML, CSS, Git, and PostgreSQL.</p>
+          <p>I'm Jonathan, an eager to learn entry-level full-stack software developer. I have a strong foundation in JavaScript, Ruby, HTML, CSS, Git, and PostgreSQL.</p>
         </div>
         <div className='about-icon-container'>
           <a href="https://www.linkedin.com/in/jonathan-raya" target="_blank" rel="noreferrer"><img src={linkedin} alt="LinkedIn Icon" /></a>
