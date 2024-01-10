@@ -24,6 +24,7 @@ const Navbar = ({ currentUser, logout }) => {
         <div className='links'>
           <ul>
 
+
             <li>
               <Link className="link" to='/about'>About Us</Link>
             </li>
@@ -31,22 +32,27 @@ const Navbar = ({ currentUser, logout }) => {
            <li>
             <Link className="link" to='/carindex'>Index</Link>
           </li> 
-
-            <li>
-            <Link className="link" to='/signup'>Signup</Link>
-          </li>
+        {currentUser && (
+          <>
           <li>
             <Link className="link" to='/carnew'>Upload a project</Link> 
           </li>
-
+           <li>
+             <Link className="link" to='/' onClick={handleClick}>Logout</Link>
+            </li>
+          </>
+            )}
+          {!currentUser && (  
+            <>
             <li>
               <Link className="link" to='/login'>Login</Link>
               </li>
 
-           <li>
-             <Link className="link" to='/' onClick={handleClick}>Logout</Link>
-            </li>
-
+            <li>
+            <Link className="link" to='/signup'>Signup</Link>
+          </li>
+            </>
+          )}
 
           </ul>
         </div>
