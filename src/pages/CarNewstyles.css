@@ -29,7 +29,7 @@ form {
   resize: vertical;
 }
 
-button {
+.new-car-btn {
   background-color: #e1080b;
   color: white;
   padding: 10px;
