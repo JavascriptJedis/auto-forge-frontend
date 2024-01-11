@@ -12,14 +12,14 @@ const CarCard = ({car, index}) => {
           <div className="card-text-container">
             <div className="card-text-padding-container">
               <h5>
-                Make: <br /> <span>{car.make}</span>
+                <b>Make:</b> <br /> <span>{car.make}</span>
               </h5>
               <h5>
-                Model: <br /> <span>{car.model}</span>
+                <b>Model:</b> <br /> <span>{car.model}</span>
               </h5>
               <div className="card-text-desc-container">
                 <p>
-                  <span>Project Preview:</span> 
+                  <span><b>Project Preview:</b></span> 
                   <br />
                   {car.description} 
                 </p>
