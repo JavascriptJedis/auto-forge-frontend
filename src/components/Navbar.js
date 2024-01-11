@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 const Navbar = ({ currentUser, logout }) => {
   const navigate = useNavigate()
 
-  const handleClick = () => {
+  const handleClick = async () => {
     logout()
     navigate("/")
   }
