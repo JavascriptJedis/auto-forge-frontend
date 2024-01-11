@@ -4,21 +4,22 @@ import "./Login.css";
 
 const Login = ({ login }) => {
   const formRef = useRef();
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+  
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    //  store the form entries in variable
-    const formData = new FormData(formRef.current);
-    // create object from entries
-    const data = Object.fromEntries(formData);
-    //  put in format to use with JWT
+   
+    e.preventDefault()
+
+    const formData = new FormData(formRef.current)
+    const data = Object.fromEntries(formData)
     const userInfo = {
       user: { email: data.email, password: data.password },
-    };
-    login(userInfo);
-    navigate("/");
-  };
+    }
+    login(userInfo)
+    // navigate("/")
+    
+  }
 
   return (
     <>
@@ -41,13 +42,14 @@ const Login = ({ login }) => {
           <br />
           Password:{" "}
           <input
+            id='login-id'
             className="login-input"
             type="password"
             name="password"
             placeholder="Password"
           />
           <br />
-          <button className="my-button" to="/" type="submit" value="Submit">
+          <button className="my-button" type="submit" value="Submit">
             Login
           </button>
           <br />
