@@ -4,7 +4,7 @@
     border: none;
     border-radius: 15px;
     box-shadow: 0px 0px 8px rgb(107, 85, 98);
-    height: 250px;
+    height: 375px;
     width: auto;
     box-sizing: border-box; 
 }
@@ -17,14 +17,14 @@
     border-radius: 10px;    
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-    width: 140px;
-    height: 250px;
+    width: 210px;
+    height: 375px;
     overflow: hidden;
 }
 
 .card-image-container img {
     width: auto;
-    height: 250px;
+    height: 375px;
 }
 
 .card-text-container {
@@ -35,8 +35,8 @@
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     padding-top: 10px;
-    height: 250px;
-    width: 200px;
+    height: 375px;
+    width: 180px;
 }
 
 .card-text-padding-container {
@@ -44,11 +44,19 @@
     padding: 10px;
 }
 
+.card-divider {
+    margin: auto;
+    padding-bottom: 10px;
+    border-top: 2px solid #e1080b;
+}
+
 .card-text-container p {
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 20ch;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    height: 170px;
 }
 
 .card-text-container h5 {
@@ -57,7 +65,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 15ch;
+    max-width: 140ch;
 }
 
 .card-text-container span {
@@ -70,6 +78,7 @@
 }
 
 .card-text-button-container {
+    height: 30px;
     text-align: right;
 }
 
