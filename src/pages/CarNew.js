@@ -112,10 +112,14 @@ const CarNew = ({ createCar, currentUser }) => {
             onChange={handleChange}
             value={newCar.description}
           />
-
-          <button className="new-car-btn" onClick={handleSubmit} name="submit">
-            Submit
+         <div className="btn-container">
+          <button className="new-car-btn" onClick={handleSubmit} name="update">
+            Update
           </button>
+          <button className="new-car-btn" onClick={handleSubmit} name="cancel">
+            Cancel
+          </button>
+          </div>
         </form>
       </div>
     </>
