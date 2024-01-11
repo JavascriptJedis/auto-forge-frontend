@@ -31,7 +31,7 @@ const CarNew = ({ createCar, currentUser }) => {
 
 
       <div className="form-div">
-        <img src={AFLogo} alt="AutoForge logo" />
+        <img className="new-car-img" src={AFLogo} alt="AutoForge logo" />
         <form>
           <label className="new-car-label" for="year">Year</label>
           <input

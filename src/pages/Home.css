@@ -1,13 +1,19 @@
+/* Home.css */
+
 .home-container {
-    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('https://i.postimg.cc/C1hx5Hf9/DRIVING-DREAMS-FORGING-EXCELLENCE.png');
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+    height: 80vh; /* Adjust the height as needed */
+  }
+  
+  .home-img {
+    max-width: 100%; /* Make sure the image doesn't exceed its natural size */
+    max-height: 100%; /* Make sure the image doesn't exceed its natural size */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
 
 
 
