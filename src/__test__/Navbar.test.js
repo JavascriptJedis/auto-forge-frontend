@@ -10,6 +10,8 @@ describe("<Navbar />", () => {
             <Navbar />
         </BrowserRouter>
     }
+
+
     it("renders without crashing", () => {
         render()
     })
