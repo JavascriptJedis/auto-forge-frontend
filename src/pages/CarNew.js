@@ -28,6 +28,8 @@ const CarNew = ({ createCar, currentUser }) => {
 
   return (
     <>
+
+
       <div className="form-div">
         <img src={AFLogo} alt="AutoForge logo" />
         <form>
@@ -39,7 +41,7 @@ const CarNew = ({ createCar, currentUser }) => {
             name="year"
             onChange={handleChange}
             value={newCar.year}
-          />
+            />
 
           <label className="new-car-label" for="make">Make</label>
           <input
@@ -49,7 +51,7 @@ const CarNew = ({ createCar, currentUser }) => {
             name="make"
             onChange={handleChange}
             value={newCar.make}
-          />
+            />
 
           <label className="new-car-label" for="model">Model</label>
           <input
@@ -59,7 +61,7 @@ const CarNew = ({ createCar, currentUser }) => {
             name="model"
             onChange={handleChange}
             value={newCar.model}
-          />
+            />
 
           <label className="new-car-label" for="color">Color</label>
           <input
@@ -69,7 +71,7 @@ const CarNew = ({ createCar, currentUser }) => {
             name="color"
             onChange={handleChange}
             value={newCar.color}
-          />
+            />
 
           <label className="new-car-label" for="miles">Miles</label>
           <input
@@ -79,7 +81,7 @@ const CarNew = ({ createCar, currentUser }) => {
             name="miles"
             onChange={handleChange}
             value={newCar.miles}
-          />
+            />
 
           <label className="new-car-label" for="image">Image</label>
           <input
@@ -89,7 +91,7 @@ const CarNew = ({ createCar, currentUser }) => {
             name="image"
             onChange={handleChange}
             value={newCar.image}
-          />
+            />
 
           <label className="new-car-label" for="cost">Cost</label>
           <input
@@ -99,7 +101,7 @@ const CarNew = ({ createCar, currentUser }) => {
             name="cost"
             onChange={handleChange}
             value={newCar.cost}
-          />
+            />
 
           <label className="new-car-label" for="description">Project Details</label>
           <textarea 
@@ -111,6 +113,7 @@ const CarNew = ({ createCar, currentUser }) => {
             name="description"
             onChange={handleChange}
             value={newCar.description}
+
           />
          <div className="btn-container">
           <button className="new-car-btn" onClick={handleSubmit} name="update">
@@ -118,10 +121,12 @@ const CarNew = ({ createCar, currentUser }) => {
           </button>
           <button className="new-car-btn" onClick={handleSubmit} name="cancel">
             Cancel
+
           </button>
           </div>
         </form>
       </div>
+
     </>
   );
 };
