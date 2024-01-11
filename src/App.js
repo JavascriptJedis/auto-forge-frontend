@@ -160,11 +160,11 @@ function App() {
       <br/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login login={login}/>} />
+        <Route path="/signup" element={<Signup signup={signup} />} />
         <Route path="/carindex" element={<CarIndex cars={cars} />} />
         <Route path="/carshow/:id" element={<CarShow cars={cars} deleteCar={deleteCar}/>} />
         <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login login={login}/>} />
-        <Route path="/signup" element={<Signup signup={signup} />} />
         {
           <>
         currentUser && (
