@@ -23,17 +23,15 @@ const Navbar = ({ currentUser, logout }) => {
 
         <div className='links'>
           <ul>
-
-
-            <li>
-              <Link className="link" to='/about'>About Us</Link>
-            </li>
-
            <li>
-            <Link className="link" to='/carindex'>Index</Link>
+            <Link className="link" to='/carindex'>Projects</Link>
           </li> 
         {currentUser && (
           <>
+              <li>
+              <Link className="link" to='/mycarindex/'>My Projects</Link>
+            </li> 
+            
           <li>
             <Link className="link" to='/carnew'>Upload a project</Link> 
           </li>
