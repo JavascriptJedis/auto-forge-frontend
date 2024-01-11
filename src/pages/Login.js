@@ -24,7 +24,7 @@ const Login = ({ login }) => {
     <>
     <section className="login-section">
       <div className="welcome-div">
-        <h1 className="welcome-text-1">Welcome!</h1>
+        <h1 className="welcome-text-1">Welcome Back!</h1>
         <br />
         <p className="login-text">Sign in to access your AutoForge account.</p>
       </div>
