@@ -18,6 +18,7 @@ const CarCard = ({car, index}) => {
                 <b>Model:</b> <br /> <span>{car.model}</span>
               </h5>
               <div className="card-text-desc-container">
+                <div className='card-divider' />
                 <p>
                   <span><b>Project Preview:</b></span> 
                   <br />
