@@ -41,6 +41,16 @@
     width: auto;
 }
 
+.fullscreen-img {
+    position: absolute;
+    top: 0;
+    left: 13%;
+    width: 60vw;
+    height: 100vh;
+    object-fit: fill;
+    z-index: 999;
+}
+
 .show-car-details-buttons {
     text-align: center;
     display: flex;
