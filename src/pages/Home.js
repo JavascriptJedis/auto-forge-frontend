@@ -1,12 +1,12 @@
 import React from 'react'
-import homeLogo from '../assets/homepageimageupdated.png'
+import Carousel from '../components/Carousel'
 import "./Home.css"
 
 
 const Home = () => {
   return (
     <div className='home-container'> 
-    <img className='home-img' src={homeLogo} alt='home logo image' /> 
+    <Carousel />
       </div>
   )
 }
