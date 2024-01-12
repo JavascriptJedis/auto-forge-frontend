@@ -42,15 +42,16 @@
 }
 
 .fullscreen-img {
-    position: absolute;
     top: 0;
-    left: 10%;
-    width: 70vw;
-    height: 100vh;
+    width: auto;
+    height: auto;
     object-fit: fill;
     z-index: 999;
     border: none;
     box-shadow: none;
+    .detail-item, .edit-btn{
+        display: none;
+    }
 }
 
 .show-car-details-buttons {
