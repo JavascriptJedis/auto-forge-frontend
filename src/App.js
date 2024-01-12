@@ -162,12 +162,13 @@ function App() {
     <div className="main-container">
       <Navbar currentUser={currentUser} logout={logout} />
       <br/>
+      <div className="routes-container">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login login={login}/>} />
         <Route path="/signup" element={<Signup signup={signup} />} />
         <Route path="/carindex" element={<CarIndex cars={cars} />} />
-        <Route path="/carshow/:id" element={<CarShow cars={cars} deleteCar={deleteCar}/>} />
+        <Route path="/carshow/:id" element={<CarShow cars={cars} deleteCar={deleteCar} currentUser={currentUser} />} />
         <Route path="/about" element={<About />} />
         {
           <>
@@ -180,6 +181,7 @@ function App() {
 }
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </div>
       <br/>
       <Footer />
     </div>
