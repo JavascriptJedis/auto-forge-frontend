@@ -26,7 +26,7 @@ const CarCard = ({car, index}) => {
                 </p>
                 <div className="card-text-button-container">
                   <Link to={`/carshow/${car.id}`}>
-                    <button>Click to See Moreasfsdfaaa</button>
+                    <button>Click to See Moreasfsdfaaaa</button>
                   </Link>
                 </div>
               </div>
