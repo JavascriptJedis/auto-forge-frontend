@@ -16,7 +16,7 @@ describe("<Footer />", () => {
     })
     it("renders a div with a specific class", () => {
         renderComponent()
-        const footerDiv = screen.getByText(/Jackson, Jonathan, Jean, Justin/i)
+        const footerDiv = screen.getByText(/JavaScript Jedis/i)
         
         expect(footerDiv).toBeInTheDocument()
     })

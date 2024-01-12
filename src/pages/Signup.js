@@ -31,24 +31,24 @@ const Signup = ({ signup }) => {
           Email:{" "}
           <input
             className="signup-input"
-            type="email"
-            name="email"
+            type="Email"
+            name="Email"
             placeholder="Email"
           />
           <br />
           Password:{" "}
           <input
             className="signup-input"
-            type="password"
-            name="password"
+            type="Password"
+            name="Password"
             placeholder="Password"
           />
           <br />
           Confirm Password:{" "}
           <input
             className="signup-input"
-            type="password"
-            name="password_confirmation"
+            type="Password"
+            name="Password_Confirmation"
             placeholder="Confirm password"
           />
           <button className="my-button-signup" type="submit" value="Submit">
@@ -59,7 +59,7 @@ const Signup = ({ signup }) => {
         <br />
       </div>
 
-      <div class="image-container">
+      <div className="image-container">
         <img
           src="https://gwrench.com/wp-content/uploads/2023/03/CarRepairVista.jpeg"
           alt="Cars Image Placeholder"

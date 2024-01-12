@@ -16,10 +16,10 @@ describe('Signup Component', () => {
     const confirmPasswordInput = screen.getByPlaceholderText('confirm password');
     const submitButton = screen.getByText('Submit');
 
-    expect(emailInput).toBeInTheDocument();
-    expect(passwordInput).toBeInTheDocument();
-    expect(confirmPasswordInput).toBeInTheDocument();
-    expect(submitButton).toBeInTheDocument();
+    expect(emailInput).toBeInTheDocument('Email');
+    expect(passwordInput).toBeInTheDocument('Password');
+    expect(confirmPasswordInput).toBeInTheDocument('confirm password');
+    expect(submitButton).toBeInTheDocument('submit');
   });
 
   test('updates email, password, and confirm password fields on input change', () => {
