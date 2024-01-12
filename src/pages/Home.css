@@ -4,15 +4,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Adjust the height as needed */
+    height: 80vh;
   }
   
-  .home-img {
-    max-width: 100%; /* Make sure the image doesn't exceed its natural size */
-    max-height: 100%; /* Make sure the image doesn't exceed its natural size */
-    width: auto; /* Maintain aspect ratio */
-    height: auto; /* Maintain aspect ratio */
-  }
   
 
 
