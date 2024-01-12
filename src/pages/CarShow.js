@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useParams } from "react-router-dom";
 import "./CarShow.css";
 
-const CarShow = ({ cars, deleteCar }) => {
+const CarShow = ({ cars, deleteCar, currentUser }) => {
   const { id } = useParams();
   let currentCar = cars?.find((car) => car.id === +id);
 
@@ -36,7 +36,7 @@ const CarShow = ({ cars, deleteCar }) => {
             <strong>Description:</strong> {currentCar.description}
           </div>
         </div>
-        <div className="show-car-details-buttons">
+        <div className={`show-car-details-buttons ${currentUser.id !== currentCar.user_id && "disable-button"}`}>
           <NavLink to={`/caredit/${currentCar.id}`}>
             <button className="edit-btn">Edit Project</button>
           </NavLink>
