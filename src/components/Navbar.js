@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
-// import logout from '../pages/Logout'
+import x from "../assets/closeIcon.png";
+import hamburger from "../assets/menuIcon.png";
 
 const Navbar = ({ currentUser, logout }) => {
   const navigate = useNavigate();
+
+  const [menuOpen, setMenuOpen] = useState(false);
 
 
   const handleClick = async () => {
@@ -17,12 +20,17 @@ const Navbar = ({ currentUser, logout }) => {
     <div className="header">
       <div className="logo">
         <Link to="/">
-          <img src="https://i.postimg.cc/NFL9WV2D/newlogo-1.png"></img>
+          <img className="logo-img" src="https://i.postimg.cc/NFL9WV2D/newlogo-1.png"></img>
         </Link>
       </div>
-
       <div className="links">
-        <ul>
+        <img 
+          className="menu-btn"
+          src={!menuOpen ? hamburger : x}
+          alt="menu-button"
+          onClick={() => setMenuOpen(!menuOpen)}
+        />
+        <ul className={`${"menuItems"} ${menuOpen && "menuOpenBox"}`} onClick={() => setMenuOpen(false)}>
           <li>
             <Link className="link" to="/carindex">
               Projects

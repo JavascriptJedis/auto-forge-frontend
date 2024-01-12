@@ -8,4 +8,47 @@
     height:55px;
     bottom: 0;
     width: 100%;
+    box-shadow: 0px 0px 8px rgb(107, 85, 98);
 }
+
+
+.flink {
+    color: white;
+    padding: .5em .8em;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+}
+.flink::before,
+.flink::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+}
+.flink::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid #FFFFFF;
+    border-right: 3px solid #FFFFFF;
+    transform: translate(-100%, 50%);
+}
+.flink::after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #FFFFFF;
+    border-left: 3px solid #FFFFFF;
+    transform: translate(100%, -50%)
+}
+.flink:hover:before,
+.flink:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+.flink:hover {
+    color: #e1080b;
+  }
