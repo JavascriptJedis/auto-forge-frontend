@@ -15,11 +15,13 @@ import Login from "./pages/Login";
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import MyCarIndex from "./pages/MyCarIndex"
+import { useNavigate } from "react-router-dom";
 
 function App() {
 
   const [cars ,setCars] = useState([])
   const [currentUser, setCurrentUser] = useState(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("user")
@@ -99,6 +101,7 @@ function App() {
     })
     .then((response) => {
       if (!response.ok) {
+        alert("Wrong email or password. Please try again.")
         throw Error(response.statusText)
       }
       // stores token in browser using local storage
@@ -108,6 +111,7 @@ function App() {
     .then((payload) => {
       localStorage.setItem("user", JSON.stringify(payload))
       setCurrentUser(payload)
+      navigate("/")
     })
     .catch((error) => console.log("signup errors:", error))
   }

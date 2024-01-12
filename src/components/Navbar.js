@@ -6,10 +6,12 @@ import { Link, useNavigate } from "react-router-dom";
 const Navbar = ({ currentUser, logout }) => {
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    logout();
-    navigate("/");
-  };
+
+  const handleClick = async () => {
+    logout()
+    navigate("/")
+  }
+
 
   return (
     <div className="header">
