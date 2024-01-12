@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import './CarCard.css'
 
 const CarCard = ({car, index}) => {
-
+  
     return (
         <>
         <div className="card-container">

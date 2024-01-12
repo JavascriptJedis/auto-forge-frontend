@@ -1,0 +1,12 @@
+.search-bar{
+    padding: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    
+}
+
+.search-bar-input{
+    width: 400px;
+    margin: auto;
+    outline: 3px ridge #e1080b;
+}
