@@ -9,7 +9,7 @@ const Navbar = ({ currentUser, logout }) => {
   const handleClick = () => {
     logout();
     navigate("/");
-  };
+  }
 
   return (
     <div className="header">
