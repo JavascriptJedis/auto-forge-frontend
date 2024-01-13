@@ -167,7 +167,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login login={login}/>} />
         <Route path="/signup" element={<Signup signup={signup} />} />
-        <Route path="/carindex" element={<CarIndex cars={cars} />} />
+        <Route path="/carindex" element={<CarIndex cars={cars} currentUser={currentUser}/>} />
         <Route path="/carshow/:id" element={<CarShow cars={cars} deleteCar={deleteCar} currentUser={currentUser} />} />
         <Route path="/about" element={<About />} />
         {
