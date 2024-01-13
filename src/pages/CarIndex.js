@@ -3,7 +3,7 @@ import CarCard from "../components/CarCard"
 import './CarIndex.css'
 import CarSearchBar from "../components/CarSearchBar"
 
-const CarIndex = ({ cars }) => {
+const CarIndex = ({ cars, currentUser }) => {
   const [searchResults, setSearchResults] = useState(cars)
 
   const handleSearch = (query) => {
@@ -36,7 +36,7 @@ const CarIndex = ({ cars }) => {
         <div className="index-card-container">
           {searchResults.length > 0 ? (
             searchResults.map((car, index) => (
-              <CarCard key={index} car={car} />
+              <CarCard key={index} car={car} currentUser={currentUser}/>
             ))
           ) : (
             <p>No matching cars found</p>

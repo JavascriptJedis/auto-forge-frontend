@@ -14,7 +14,7 @@ console.log("mycars:", myCars)
         <main>
           <div className="index-card-container">
           {myCars?.map((car, index) => {
-            return <CarCard car={car} index={index} />
+            return <CarCard car={car} index={index} currentUser={currentUser}/>
           })}
           </div>
         </main>

@@ -42,7 +42,7 @@ const CarShow = ({ cars, deleteCar, currentUser }) => {
             <strong>Description:</strong> {currentCar.description}
           </div>
         </div>
-        <div className={`show-car-details-buttons ${currentUser.id  !== currentCar.user_id ? "disable-button" : ""}`}>
+        <div className={`show-car-details-buttons ${currentUser === null ? "disable-button" : (currentUser.id === currentCar.user_id ? "" : "disable-button")}`}>
             <NavLink to={`/caredit/${currentCar.id}`}>
               <button className="edit-btn">Edit Project</button>
             </NavLink>
