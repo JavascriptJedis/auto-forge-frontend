@@ -90,6 +90,18 @@
 
 .card-text-button-container button:hover {
     color: #636365;
-    border-radius: 10px;
     background-color: white;
 }
+
+
+@media screen and (max-width: 500px) {
+    .card-image-container {
+        width: 190px;
+    }
+
+    .card-text-container {
+        width: 160px;
+    }
+
+    
+  }

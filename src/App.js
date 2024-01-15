@@ -161,7 +161,6 @@ function App() {
   return (
     <div className="main-container">
       <Navbar currentUser={currentUser} logout={logout} />
-      <br/>
       <div className="routes-container">
       <Routes>
         <Route path="/" element={<Home />} />
@@ -182,7 +181,6 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       </div>
-      <br/>
       <Footer />
     </div>
   );

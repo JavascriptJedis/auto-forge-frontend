@@ -1,7 +1,10 @@
-.form-div,
-.new-car-img {
+.form-div {
   max-width: 400px;
-  margin: auto;
+  padding: 0 30px 20px 30px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px rgb(107, 85, 98);
+  margin: 30px auto;
 }
 
 
@@ -13,6 +16,10 @@ form {
 .new-car-label {
   margin-bottom: 5px;
   font-weight: bold;
+}
+
+.new-car-img {
+  max-width: 350px;
 }
 
 .new-car-input {
@@ -29,16 +36,20 @@ form {
   resize: vertical;
 }
 
+.new-btn-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .new-car-btn {
   background-color: #e1080b;
   color: white;
-  padding: 10px;
   border: none;
   border-radius: 4px;
+  padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
   display: flex;
-  justify-content: center;
   justify-content: space-evenly;
 }
 
@@ -46,3 +57,12 @@ form {
   background-color: #9b090b;
 }
 
+@media screen and (max-width: 600px) {
+  .form-div {
+    max-width: 300px;
+  }
+  .new-car-img {
+    max-width: 240px;
+  }
+  
+}

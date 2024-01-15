@@ -23,8 +23,10 @@ const Login = ({ login }) => {
 
   return (
     <>
+    <div className="login-container">
     <section className="login-section">
       <div className="welcome-div">
+        <br />
         <h1 className="welcome-text-1">Welcome Back!</h1>
         <br />
         <p className="login-text">Sign in to access your AutoForge account.</p>
@@ -56,6 +58,7 @@ const Login = ({ login }) => {
         </form>
       </div>
     </section>  
+    </div>
     </>
   );
 };

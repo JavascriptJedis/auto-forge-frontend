@@ -22,10 +22,12 @@ const Signup = ({ signup }) => {
   };
 
   return (
+    <div className="signup-container">
     <section className="signup-section">
       <div className="form-container">
         <form className="signup-form" ref={formRef} onSubmit={handleSubmit}>
 
+        <br />
         <p className="text-1">New here? Sign up for free</p>
 
           Email:{" "}
@@ -51,12 +53,12 @@ const Signup = ({ signup }) => {
             name="Password_Confirmation"
             placeholder="Confirm password"
           />
+          <br />
           <button className="my-button-signup" type="submit" value="Submit">
             Submit
           </button>
           <br />
         </form>
-        <br />
       </div>
 
       <div className="image-container">
@@ -70,6 +72,7 @@ const Signup = ({ signup }) => {
         Already registered? <a href="/login">Login</a>
       </div> */}
     </section>
+    </div>
   );
 };
 

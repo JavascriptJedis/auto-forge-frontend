@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import "./CarEditstyles.css";
-import editCarimg from "../assets/zjsnbvuhx5e11.png";
+import "./CarNewstyles.css";
+import AFLogo from '../assets/zjsnbvuhx5e11.png'
 
 const CarEdit = ({ cars, updateCar, currentUser }) => {
   const navigate = useNavigate();
@@ -31,90 +31,102 @@ const CarEdit = ({ cars, updateCar, currentUser }) => {
   };
 
   return (
-    <div className="car-edit-container">
-      <form>
-        <label for="year">Year</label>
-        <input
-          onChange={handleChange}
-          id="year"
-          value={editCar.year}
-          type="text"
-          name="year"
+    <div className="form-div">
+    <img className="new-car-img" src={AFLogo} alt="AutoForge logo" />
+    <form>
+      <label className="new-car-label" for="year">Year</label>
+      <input
+        className="new-car-input"
+        id="year"
+        type="text"
+        name="year"
+        onChange={handleChange}
+        value={editCar.year}
         />
 
-        <label for="make">Make</label>
-        <input
-          onChange={handleChange}
-          id="make"
-          value={editCar.make}
-          type="text"
-          name="make"
+      <label className="new-car-label" for="make">Make</label>
+      <input
+        className="new-car-input"
+        id="make"
+        type="text"
+        name="make"
+        onChange={handleChange}
+        value={editCar.make}
         />
 
-        <label for="model">Model</label>
-        <input
-          onChange={handleChange}
-          id="model"
-          value={editCar.model}
-          type="text"
-          name="model"
+      <label className="new-car-label" for="model">Model</label>
+      <input
+        className="new-car-input"
+        id="model"
+        type="text"
+        name="model"
+        onChange={handleChange}
+        value={editCar.model}
         />
 
-        <label for="color">Color</label>
-        <input
-          onChange={handleChange}
-          id="color"
-          value={editCar.color}
-          type="text"
-          name="color"
+      <label className="new-car-label" for="color">Color</label>
+      <input
+        className="new-car-input"
+        id="color"
+        type="text"
+        name="color"
+        onChange={handleChange}
+        value={editCar.color}
         />
 
-        <label for="miles">Miles</label>
-        <input
-          onChange={handleChange}
-          id="miles"
-          value={editCar.miles}
-          type="text"
-          name="miles"
+      <label className="new-car-label" for="miles">Miles</label>
+      <input
+        className="new-car-input"
+        id="miles"
+        type="text"
+        name="miles"
+        onChange={handleChange}
+        value={editCar.miles}
         />
 
-        <label for="image">Image</label>
-        <input
-          onChange={handleChange}
-          id="image"
-          value={editCar.image}
-          type="text"
-          name="image"
+      <label className="new-car-label" for="image">Image</label>
+      <input
+        className="new-car-input"
+        id="image"
+        type="text"
+        name="image"
+        onChange={handleChange}
+        value={editCar.image}
         />
 
-        <label for="cost">Cost</label>
-        <input
-          onChange={handleChange}
-          id="cost"
-          value={editCar.cost}
-          type="text"
-          name="cost"
+      <label className="new-car-label" for="cost">Cost</label>
+      <input
+        className="new-car-input"
+        id="cost"
+        type="text"
+        name="cost"
+        onChange={handleChange}
+        value={editCar.cost}
         />
 
-        <label for="description">Description</label>
-        <textarea
-          rows="6"
-          onChange={handleChange}
-          id="description"
-          value={editCar.description}
-          type="text"
-          name="description"
-        />
-        <div className="btn-container">
-          <button className="new-car-btn" onClick={handleSubmit} name="update">
-            Update
-          </button>
-          <button className="new-car-btn" onClick={handleSubmit} name="cancel">
-            Cancel
-          </button>
-        </div>
-      </form>
-    </div>
+      <label className="new-car-label" for="description">Project Details</label>
+      <textarea 
+        rows="6"
+        placeholder="Tell us about your car..."
+        className="new-car-input"
+        id="description"
+        type="text"
+        name="description"
+        onChange={handleChange}
+        value={editCar.description}
+
+      />
+     <div className="new-btn-container">
+      <button className="new-car-btn" onClick={handleSubmit} name="update">
+        Update
+      </button>
+      <button className="new-car-btn" onClick={handleSubmit} name="cancel">
+        Cancel
+
+      </button>
+      </div>
+    </form>
+  </div>
   );
 };
 
