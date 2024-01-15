@@ -1,11 +1,5 @@
-.carousel {
-    max-width: 1500px;
-    margin: auto;
-}
-
-@media (max-width: 1200px){
-    .carouselitem,
-    .carousel {
-        margin-top: 10%;
-    }
+.slide-img {
+    max-width: 100%;
+    height: auto;
+    max-height: calc(100vh - 125px);    
 }

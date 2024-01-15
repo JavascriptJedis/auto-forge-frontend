@@ -11,7 +11,7 @@ const myCars = cars?.filter(car => currentUser.id === car.user_id)
 console.log("mycars:", myCars)
     return (
         <>
-        <main>
+        <main className="index-container">
           <div className="index-card-container">
           {myCars?.map((car, index) => {
             return <CarCard car={car} index={index} currentUser={currentUser}/>

@@ -33,6 +33,7 @@ const CarIndex = ({ cars, currentUser }) => {
     <>
       <main>
         <CarSearchBar onSearch={handleSearch} />
+        <div className="index-container">
         <div className="index-card-container">
           {searchResults.length > 0 ? (
             searchResults.map((car, index) => (
@@ -41,6 +42,7 @@ const CarIndex = ({ cars, currentUser }) => {
           ) : (
             <p>No matching cars found</p>
           )}
+        </div>
         </div>
       </main>
     </>

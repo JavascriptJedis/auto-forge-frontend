@@ -1,11 +1,17 @@
-.login-section {
-    border: 1px solid black; 
-    padding: 2px; 
-    margin: auto;
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: calc(100vh - 125px);
+}
+
+.login-section { 
+    margin: 30px auto;
     width: 400px;
     height: auto;
     border-radius: 10px;
-    
+    box-shadow: 0px 0px 8px rgb(107, 85, 98);
 }
 
 .welcome-div {
@@ -13,8 +19,6 @@
     flex-direction: column; 
     align-items: center;    
     justify-content: center; 
-    margin-top: 7vh;
-    
 }
 
 
@@ -42,17 +46,24 @@
     font-size: 20px;
     padding: 14x;
     border-radius: 8px;
+    border: 1px solid #9f9f9f;
     margin: 1%;
     width: 250px; 
     height: 40px;
-    background-color: #636365;
+    background-color: #e1080b;
     color: white;
     cursor: pointer;
 }
 
+.my-button:hover {
+    background-color: #9b090b;
+}
+
 .login-input {
     display: flex;
+    border: 1px solid #9f9f9f;
     width: 250px; 
+    background-color: #d5d5d5;
     height: 40px; 
     border-radius: 10px; 
     padding: 10px; 
@@ -66,3 +77,9 @@
     font-size:  14px;
     font-weight: 500;
 }
+
+@media screen and (max-width: 600px) {
+    .login-section { 
+      max-width: 350px;
+    }
+  }

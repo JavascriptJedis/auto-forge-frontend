@@ -10,19 +10,14 @@ const CarSearchBar = ({ onSearch }) => {
         onSearch(newQuery); // Trigger search on each input change
     }
 
-    const handleSearch = () => {
-    onSearch(query);
-    }
-
     return (
     <div  className="search-bar">
-    <input className="search-bar-input"
+        <input className="search-bar-input"
         type="text"
         placeholder="Search by make, model or project"
         value={query}
         onChange={handleInputChange}
-    />
-    {/* <button onClick={handleSearch}>Search</button> */}
+        />
     </div>
 );
 };

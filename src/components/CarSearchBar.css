@@ -1,12 +1,17 @@
 .search-bar{
-    padding: 20px;
-    margin-bottom: 10px;
+    padding-top: 30px;
     display: flex;
-    
 }
 
 .search-bar-input{
     width: 400px;
     margin: auto;
     outline: 3px ridge #e1080b;
+}
+
+@media screen and (max-width: 500px) {
+    .search-bar-input{
+        width: 300px;
+    }
+
 }

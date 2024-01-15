@@ -28,11 +28,9 @@ const CarNew = ({ createCar, currentUser }) => {
 
   return (
     <>
-
-
       <div className="form-div">
-        <img className="new-car-img" src={AFLogo} alt="AutoForge logo" />
         <form>
+          <img className="new-car-img" src={AFLogo} alt="AutoForge logo" />
           <label className="new-car-label" for="year">Year</label>
           <input
             className="new-car-input"
@@ -115,9 +113,9 @@ const CarNew = ({ createCar, currentUser }) => {
             value={newCar.description}
 
           />
-         <div className="btn-container">
+         <div className="new-btn-container">
           <button className="new-car-btn" onClick={handleSubmit} name="update">
-            Update
+            Create
           </button>
           <button className="new-car-btn" onClick={handleSubmit} name="cancel">
             Cancel

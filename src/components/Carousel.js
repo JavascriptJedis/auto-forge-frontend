@@ -45,7 +45,7 @@ function Example(args) {
         >
           <div className="slide-img-cont">
             <img
-              style={{ width: "100%", height: "auto" }}
+              className="slide-img"
               src={item.src}
               alt={item.altText}
             />
