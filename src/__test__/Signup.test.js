@@ -4,34 +4,34 @@ import { MemoryRouter } from 'react-router-dom'; // MemoryRouter is used for tes
 import Signup from '../pages/Signup';
 
 describe('Signup Component', () => {
-  test('renders signup form with email, password, and confirm password fields', () => {
+  test('renders signup form with Email, Password, and Confirm Password fields', () => {
     render(
       <MemoryRouter>
         <Signup signup={() => {}} />
       </MemoryRouter>
     );
     
-    const emailInput = screen.getByPlaceholderText('email');
-    const passwordInput = screen.getByPlaceholderText('password');
-    const confirmPasswordInput = screen.getByPlaceholderText('confirm password');
+    const emailInput = screen.getByPlaceholderText('Email');
+    const passwordInput = screen.getByPlaceholderText('Password');
+    const confirmPasswordInput = screen.getByPlaceholderText('Confirm Password');
     const submitButton = screen.getByText('Submit');
 
     expect(emailInput).toBeInTheDocument('Email');
     expect(passwordInput).toBeInTheDocument('Password');
-    expect(confirmPasswordInput).toBeInTheDocument('confirm password');
+    expect(confirmPasswordInput).toBeInTheDocument('Confirm Password');
     expect(submitButton).toBeInTheDocument('submit');
   });
 
-  test('updates email, password, and confirm password fields on input change', () => {
+  test('updates Email, Password, and Confirm Password fields on input change', () => {
     render(
       <MemoryRouter>
         <Signup signup={() => {}} />
       </MemoryRouter>
     );
     
-    const emailInput = screen.getByPlaceholderText('email');
-    const passwordInput = screen.getByPlaceholderText('password');
-    const confirmPasswordInput = screen.getByPlaceholderText('confirm password');
+    const emailInput = screen.getByPlaceholderText('Email');
+    const passwordInput = screen.getByPlaceholderText('Password');
+    const confirmPasswordInput = screen.getByPlaceholderText('Confirm Password');
 
     fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
     fireEvent.change(passwordInput, { target: { value: 'testPassword' } });
@@ -42,16 +42,16 @@ describe('Signup Component', () => {
     expect(confirmPasswordInput.value).toBe('testPassword');
   });
 
-  test('submits the form with correct email, password, and confirm password values', () => {
+  test('submits the form with correct Email, Password, and Confirm Password values', () => {
     render(
       <MemoryRouter>
         <Signup signup={() => {}} />
       </MemoryRouter>
     );
     
-    const emailInput = screen.getByPlaceholderText('email');
-    const passwordInput = screen.getByPlaceholderText('password');
-    const confirmPasswordInput = screen.getByPlaceholderText('confirm password');
+    const emailInput = screen.getByPlaceholderText('Email');
+    const passwordInput = screen.getByPlaceholderText('Password');
+    const confirmPasswordInput = screen.getByPlaceholderText('Confirm Password');
     const submitButton = screen.getByText('Submit');
 
     fireEvent.change(emailInput, { target: { value: 'test@example.com' } });

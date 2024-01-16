@@ -49,7 +49,7 @@ const Signup = ({ signup }) => {
               className="signup-input"
               type="Password"
               name="Password_Confirmation"
-              placeholder="Confirm password"
+              placeholder="Confirm Password"
             />
             <br />
             <button className="my-button-signup" type="submit" value="Submit">

@@ -4,11 +4,11 @@ import Login from '../pages/Login';
 // import { BrowserRouter } from 'react-router-dom';
 
 describe('Login Component', () => {
-  test('renders login form with email and password fields', () => {
+  test('renders login form with Email and Password fields', () => {
     render(<Login />);
     
-    const emailInput = screen.getByPlaceholderText('email');
-    const passwordInput = screen.getByPlaceholderText('password');
+    const emailInput = screen.getByPlaceholderText('Email');
+    const passwordInput = screen.getByPlaceholderText('Password');
     const loginButton = screen.getByText('Login');
 
     expect(emailInput).toBeInTheDocument();
@@ -19,8 +19,8 @@ describe('Login Component', () => {
   test('updates email and password fields on input change', () => {
     render(<Login />);
     
-    const emailInput = screen.getByPlaceholderText('email');
-    const passwordInput = screen.getByPlaceholderText('password');
+    const emailInput = screen.getByPlaceholderText('Email');
+    const passwordInput = screen.getByPlaceholderText('Password');
 
     fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
     fireEvent.change(passwordInput, { target: { value: 'testPassword' } });
@@ -32,8 +32,8 @@ describe('Login Component', () => {
   test('submits the form with correct email and password values', () => {
     render(<Login />);
     
-    const emailInput = screen.getByPlaceholderText('email');
-    const passwordInput = screen.getByPlaceholderText('password');
+    const emailInput = screen.getByPlaceholderText('Email');
+    const passwordInput = screen.getByPlaceholderText('Password');
     const loginButton = screen.getByText('Login');
 
     fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
