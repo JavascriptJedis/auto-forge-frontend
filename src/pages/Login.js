@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
-// import { useNavigate } from "react-router-dom";
+
 import "./Login.css";
 
 const Login = ({ login }) => {
   const formRef = useRef();
-  // const navigate = useNavigate();
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -15,7 +15,7 @@ const Login = ({ login }) => {
       user: { email: data.email, password: data.password },
     };
     login(userInfo);
-    // navigate("/")
+
   }
 
   return (
