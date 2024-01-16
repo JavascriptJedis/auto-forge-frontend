@@ -38,35 +38,31 @@ function Example(args) {
 
   const slides = items.map((item) => {
     return (
-        <CarouselItem
-          onExiting={() => setAnimating(true)}
-          onExited={() => setAnimating(false)}
-          key={item.src}
-        >
-          <div className="slide-img-cont">
-            <img
-              className="slide-img"
-              src={item.src}
-              alt={item.altText}
-            />
-          </div>
-          <CarouselCaption
-            captionText={item.caption}
-            captionHeader={item.caption}
-          />
-        </CarouselItem>
+      <CarouselItem
+        onExiting={() => setAnimating(true)}
+        onExited={() => setAnimating(false)}
+        key={item.src}
+      >
+        <div className="slide-img-cont">
+          <img className="slide-img" src={item.src} alt={item.altText} />
+        </div>
+        <CarouselCaption
+          captionText={item.caption}
+          captionHeader={item.caption}
+        />
+      </CarouselItem>
     );
   });
 
   return (
-      <Carousel
-        activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-        {...args}
-      >
-        {slides}
-      </Carousel>
+    <Carousel
+      activeIndex={activeIndex}
+      next={next}
+      previous={previous}
+      {...args}
+    >
+      {slides}
+    </Carousel>
   );
 }
 
