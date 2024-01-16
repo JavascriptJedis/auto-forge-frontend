@@ -89,7 +89,7 @@ function App() {
     }
   };
   const login = (userInfo) => {
-    fetch(`${url}/login`, {
+    fetch("https://auto-forge-backend.onrender.com/login", {
       body: JSON.stringify(userInfo),
       headers: {
         "Content-Type": "application/json",
@@ -115,7 +115,7 @@ function App() {
   };
 
   const signup = (userInfo) => {
-    fetch(`${url}/signup`, {
+    fetch("https://auto-forge-backend.onrender.com/signup", {
       body: JSON.stringify(userInfo),
       headers: {
         "Content-Type": "application/json",
@@ -139,7 +139,7 @@ function App() {
   };
 
   const logout = () => {
-    fetch(`${url}/logout`, {
+    fetch("https://auto-forge-backend.onrender.com/logout", {
       headers: {
         "Content-Type": "application/json",
         Authorization: localStorage.getItem("token"), //retrieve token
