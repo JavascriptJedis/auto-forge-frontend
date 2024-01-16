@@ -7,7 +7,7 @@ const Login = ({ login }) => {
   // const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     const formData = new FormData(formRef.current);
     const data = Object.fromEntries(formData);
@@ -16,7 +16,7 @@ const Login = ({ login }) => {
     };
     login(userInfo);
     // navigate("/")
-  };
+  }
 
   return (
     <>
