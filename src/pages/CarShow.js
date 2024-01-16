@@ -1,18 +1,46 @@
-import React, { useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
-import "./CarShow.css";
+import React, { useState } from "react"
+import { NavLink, useParams } from "react-router-dom"
+import { Modal, ModalBody, ModalFooter, Button } from "reactstrap"
+import "./CarShow.css"
 
 const CarShow = ({ cars, deleteCar, currentUser }) => {
   const { id } = useParams();
+  const [showModal, setShowModal] = useState(false)
   let currentCar = cars?.find((car) => car.id === +id);
+
+  const handleImageClick = () => {
+    setShowModal(true)
+  }
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  }
 
   return (
     <>
       <div className="show-page-container">
         <div className="show-container">
           <div className="show-image-container">
-            <img src={currentCar.image} alt="Car Image" />
+            <img src={currentCar.image} alt="Car Image" onClick={handleImageClick} />
           </div>
+          <Modal isOpen={showModal} toggle={handleCloseModal} size="lg" className="full-screen-modal">
+            <ModalBody>
+              <img
+                src={currentCar.image}
+                alt="Car Image"
+                style={{ width: "100%" }}
+              />
+              {currentCar.make}
+              <br></br>
+              {currentCar.model}
+            </ModalBody>
+            <ModalFooter>
+              <Button color="secondary" onClick={handleCloseModal}>
+                Close
+              </Button>
+            </ModalFooter>
+          </Modal>
+          
           <div className="show-text-container">
             <div className="show-text-padding-container">
               <div className="show-text-row">
