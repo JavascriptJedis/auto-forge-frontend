@@ -29,10 +29,10 @@ function App() {
   }, []);
   // CRUD functionality fetch calls
 
-  const url = "http://localhost:3000/";
+  const url = "https://auto-forge-backend.onrender.com";
 
   const readCars = () => {
-    fetch(`http://localhost:3000/cars`) // this is the request
+    fetch(`https://auto-forge-backend.onrender.com/cars`) // this is the request
       .then((response) => response.json()) //converts JSON to data we can use in JS
       .then((payload) => {
         setCars(payload);
@@ -41,7 +41,7 @@ function App() {
   };
 
   const createCar = (car) => {
-    fetch("http://localhost:3000/cars", {
+    fetch("https://auto-forge-backend.onrender.com/cars", {
       // converts the object to a string that can be passed in the request
       body: JSON.stringify(car),
       // specify the info being sent in JSON and the info returning should be JSON
@@ -57,7 +57,7 @@ function App() {
   };
 
   const updateCar = (car, id) => {
-    fetch(`http://localhost:3000/cars/${id}`, {
+    fetch(`https://auto-forge-backend.onrender.com/cars/${id}`, {
       // converting an object to a string
       body: JSON.stringify(car),
       // specify the info being sent in JSON and the info returning should be JSON
@@ -77,7 +77,7 @@ function App() {
       "Are you sure you want to delete this project?"
     );
     if (confirmDelete) {
-      fetch(`http://localhost:3000/cars/${id}`, {
+      fetch(`https://auto-forge-backend.onrender.com/cars/${id}`, {
         headers: {
           "Content-Type": "application/json",
         },
