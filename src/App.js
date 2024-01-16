@@ -115,6 +115,7 @@ function App() {
   };
 
   const signup = (userInfo) => {
+    console.log('signup:',userInfo)
     fetch("https://auto-forge-backend.onrender.com/signup", {
       body: JSON.stringify(userInfo),
       headers: {
