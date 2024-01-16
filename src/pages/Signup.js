@@ -31,24 +31,24 @@ const Signup = ({ signup }) => {
             Email:{" "}
             <input
               className="signup-input"
-              type="Email"
-              name="Email"
-              placeholder="Email"
+              type="email"
+              name="email"
+              placeholder="email"
             />
             <br />
             Password:{" "}
             <input
               className="signup-input"
-              type="Password"
-              name="Password"
+              type="password"
+              name="password"
               placeholder="Password"
             />
             <br />
             Confirm Password:{" "}
             <input
               className="signup-input"
-              type="Password"
-              name="Password_Confirmation"
+              type="password"
+              name="password_confirmation"
               placeholder="Confirm Password"
             />
             <br />
