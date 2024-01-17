@@ -23,9 +23,7 @@ const Login = ({ login }) => {
       <div className="login-container">
         <section className="login-section">
           <div className="welcome-div">
-            <br />
             <h1 className="welcome-text-1">Welcome Back!</h1>
-            <br />
             <p className="login-text">
               Sign in to access your AutoForge account.
             </p>
@@ -40,7 +38,6 @@ const Login = ({ login }) => {
                 name="email"
                 placeholder="Email"
               />
-              <br />
               Password:{" "}
               <input
                 id="login-id"
@@ -49,11 +46,9 @@ const Login = ({ login }) => {
                 name="password"
                 placeholder="Password"
               />
-              <br />
               <button className="my-button" type="submit" value="Submit">
                 Login
               </button>
-              <br />
             </form>
           </div>
         </section>
