@@ -26,7 +26,6 @@ const Signup = ({ signup }) => {
       <section className="signup-section">
         <div className="form-container">
           <form className="signup-form" ref={formRef} onSubmit={handleSubmit}>
-            <br />
             <p className="text-1">New here? Sign up for free</p>
             Email:{" "}
             <input
@@ -35,7 +34,6 @@ const Signup = ({ signup }) => {
               name="Email"
               placeholder="Email"
             />
-            <br />
             Password:{" "}
             <input
               className="signup-input"
@@ -43,7 +41,6 @@ const Signup = ({ signup }) => {
               name="Password"
               placeholder="Password"
             />
-            <br />
             Confirm Password:{" "}
             <input
               className="signup-input"
@@ -51,11 +48,9 @@ const Signup = ({ signup }) => {
               name="Password_Confirmation"
               placeholder="Confirm password"
             />
-            <br />
             <button className="my-button-signup" type="submit" value="Submit">
               Submit
             </button>
-            <br />
           </form>
         </div>
 
